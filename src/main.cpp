@@ -1,9 +1,8 @@
 #include <Arduino.h>
-
  
 // Bibliotecas
-#include "Keypad.h"
-#include "LiquidCrystal.h"   // library for Alphanumeric LCD display (DS1)
+#include <Keypad.h> 
+#include <LiquidCrystal.h>   // library for Alphanumeric LCD display (DS1)
 
 /* MAPEAMENTO DO LCD 16x2
     LCD RS pin to digital pin 12
@@ -17,8 +16,8 @@ LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 
 /* MAPEAMENTO DO TECLADO
  * lin1 --> D7
- * lin2 --> D8
- * col1 --> D9
+ * lin2 --> D9
+ * col1 --> D8
  * col2 --> D10
  */
 const byte rows = 2; //duas linhas
@@ -137,7 +136,7 @@ void loop()// loop
    digitalWrite(con, LOW); //Relay = "off"
    digitalWrite(led, LOW); // LED ="off"
  }
-} //end loop
+} // end loop
 
 void disp(){
   //lcd.clear();               // clear LCD Display (DS1)
